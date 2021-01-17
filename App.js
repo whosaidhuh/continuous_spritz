@@ -6,7 +6,9 @@ import ReactSpritz from 'react-spritz';
 
 
 export default function App() {
-  const test_string = "teststrin";
+    function refreshPage() {
+        window.location.reload(false);
+    }
   return (
     <View style={styles.container}>
         <ReactSpritz
@@ -17,6 +19,7 @@ export default function App() {
             playing={true}
             stop={true}
         />
+        <button onClick={refreshPage}>Click to reload!</button>
 
       <StatusBar style="auto" />
     </View>
